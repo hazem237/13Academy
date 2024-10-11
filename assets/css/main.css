@@ -953,7 +953,7 @@ section,
 # Clients Section
 --------------------------------------------------------------*/
 .clients .swiper-slide img {
-  opacity: 0.5;
+  opacity: 0.8;
   transition: 0.3s;
   filter: grayscale(100);
 }
@@ -961,10 +961,6 @@ section,
 .clients .swiper-slide img:hover {
   filter: none;
   opacity: 1;
-}
-
-.clients .swiper-wrapper {
-  height: auto;
 }
 
 .clients .swiper-pagination {
@@ -981,6 +977,33 @@ section,
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
+}
+
+.clients .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background-color: var(--default-font);
+}
+
+.clients .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; /* Allows natural image width unless specified otherwise */
+}
+
+.clients img {
+  max-height: 80px; /* Adjust based on your preference */
+  width: auto; /* Keeps the aspect ratio intact */
+  margin: 0 20px; /* Adds spacing between logos */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px; /* Space between title and logos */
+  font-family: var(--heading-font);
 }
 
 /*--------------------------------------------------------------

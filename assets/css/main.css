@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #151515; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ffffff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: hsl(207, 70%, 72%); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #312f2f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,7 +30,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: rgba(255, 255, 255, 0.905);  /* The default color of the main navmenu links */
-  --nav-hover-color: #97a6f1; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #b8c4fc; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -46,8 +46,8 @@
 
 .dark-background {
   --background-color: #253068;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --default-color: #fdfdfd;
+  --heading-color: #bbd3f6;
   --surface-color: #252525;
   --contrast-color: #2a2727;
 }
@@ -905,8 +905,9 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about .content h3 {
-  font-size: 1.75rem;
+  font-size: 2.75rem;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .about .content .fst-italic {
@@ -921,17 +922,31 @@ section,
 .about .content ul li {
   padding: 10px 0 0 0;
   display: flex;
+  align-items: center; /* Ensures that the icon and text align perfectly */
+  direction: rtl; /* Ensures text flows right to left */
 }
 
 .about .content ul i {
   color: var(--accent-color);
-  margin-right: 0.5rem;
+  margin-left: 10px; /* Ensures spacing is on the right side in an RTL layout */
   line-height: 1.2;
   font-size: 1.25rem;
 }
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.about .content {
+  text-align: right; /* Aligns text to the right for Arabic */
+}
+
+.about .content ul li {
+  justify-content: flex-start; /* Aligns list items to the right */
+}
+
+.about .content ul i {
+  margin-left: 10px; /* Adjusts the icon spacing for RTL */
 }
 
 /*--------------------------------------------------------------
